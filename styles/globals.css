@@ -60,25 +60,25 @@ h1 {
 }
 
 @layer components {
-  .wgt-300 {
+  .wght-300 {
     font-variation-settings: 'wght' 300;
   }
-  .wgt-400 {
+  .wght-400 {
     font-variation-settings: 'wght' 400;
   }
-  .wgt-500 {
+  .wght-500 {
     font-variation-settings: 'wght' 500;
   }
-  .wgt-600 {
+  .wght-600 {
     font-variation-settings: 'wght' 600;
   }
-  .wgt-700 {
+  .wght-700 {
     font-variation-settings: 'wght' 700;
   }
-  .wgt-800 {
+  .wght-800 {
     font-variation-settings: 'wght' 800;
   }
-  .wgt-900 {
+  .wght-900 {
     font-variation-settings: 'wght' 900;
   }
 }

@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import NavLink from '@/components/NavLink'
-import NavButton from '@/components/NavButton'
+import ContactButton from '@/components/ContactButton'
+import RightArrow from '@/components/icons/RightArrow'
 
 export default function Home() {
   return (
@@ -14,20 +15,20 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <nav className='text-xs fixed w-full left-0 top-0 bottom-auto z-50 py-6'>
+      <nav className='text-[0.875em] fixed w-full left-0 top-0 bottom-auto z-50 py-6 border-b-2'>
         <div className='flex max-w-7xl mr-auto ml-auto px-10 justify-between items-center'>
-          <Link className='w-full wgt-600' href='/'>
+          <Link className='w-full wght-600' href='/'>
             Yax Patel
           </Link>
 
           <div className='static flex w-full justify-between items-stretch float-right'>
             <div className='flex w-full justify-between'>
-              <div className='flex nav-center pl-24 justify-start items-center flex-1'>
+              <div className='flex nav-center justify-start items-center flex-1'>
                 <NavLink href='/#about'>About</NavLink>
                 <NavLink href='/#experience'>Experience</NavLink>
                 <NavLink href='/#projects'>Projects</NavLink>
                 <NavLink href='/Yax_Patel_Resume.pdf'>Resume</NavLink>
-                <NavButton>Contact</NavButton>
+                <ContactButton />
               </div>
             </div>
           </div>
