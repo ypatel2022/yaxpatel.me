@@ -1,33 +1,33 @@
-name: Node.js CI
+name: Deploy to Github Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
+  workflow_dispatch:
 
 jobs:
-  build:
+  deployment:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v2
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          # update the Node version to meet your needs
-          node-version: 16
-          cache: npm
+          node-version: 'lts/*'
+          cache: 'npm'
 
       - name: Build
         run: |
-          npm ci
+          npm i
           npm run build
           npm run export
-          touch out/.nojekyll
 
       - name: Deploy
-        # https://github.com/JamesIves/github-pages-deploy-action
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: out
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./out
