@@ -26,8 +26,8 @@ export default function Home() {
 
       <main>
         <h1 className='text-9xl'>YAX PATEL</h1>A Software Engineering student at
-        McMaster University. I'm passionate about creating innovative software
-        solutions.
+        McMaster University. I&apos;m passionate about creating innovative
+        software solutions.
       </main>
     </>
   )
