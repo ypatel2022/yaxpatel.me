@@ -42,19 +42,12 @@ body {
   text-rendering: optimizeLegibility;
   background-color: #fffdf3;
   font-family: 'Satoshi-Variable', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
   font-variation-settings: 'wght' 500;
-}
-
-a {
-  /* font-variation-settings: 'wght' 300; */
-  /* transition: all 0.2s ease-in-out; */
-}
-
-a:hover {
-  /* font-variation-settings: 'wght' 700; */
 }
 
 .nav-center {
@@ -64,4 +57,28 @@ a:hover {
 .nav-right {
   grid-column-gap: 3rem;
   grid-row-gap: 0rem;
+}
+
+@layer components {
+  .wgt-300 {
+    font-variation-settings: 'wght' 300;
+  }
+  .wgt-400 {
+    font-variation-settings: 'wght' 400;
+  }
+  .wgt-500 {
+    font-variation-settings: 'wght' 500;
+  }
+  .wgt-600 {
+    font-variation-settings: 'wght' 600;
+  }
+  .wgt-700 {
+    font-variation-settings: 'wght' 700;
+  }
+  .wgt-800 {
+    font-variation-settings: 'wght' 800;
+  }
+  .wgt-900 {
+    font-variation-settings: 'wght' 900;
+  }
 }

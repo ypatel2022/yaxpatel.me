@@ -1,10 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Inter } from 'next/font/google'
 import NavLink from '@/components/NavLink'
-
-const inter = Inter({ subsets: ['latin'] })
+import NavButton from '@/components/NavButton'
 
 export default function Home() {
   return (
@@ -16,9 +14,9 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <nav className='fixed w-full left-0 top-0 bottom-auto z-50 py-6'>
-        <div className='flex max-w-7xl mr-auto ml-auto px-10 justify-between border-r-4'>
-          <Link className='w-full' href='/'>
+      <nav className='text-xs fixed w-full left-0 top-0 bottom-auto z-50 py-6'>
+        <div className='flex max-w-7xl mr-auto ml-auto px-10 justify-between items-center'>
+          <Link className='w-full wgt-600' href='/'>
             Yax Patel
           </Link>
 
@@ -29,12 +27,7 @@ export default function Home() {
                 <NavLink href='/#experience'>Experience</NavLink>
                 <NavLink href='/#projects'>Projects</NavLink>
                 <NavLink href='/Yax_Patel_Resume.pdf'>Resume</NavLink>
-                <Link
-                  className='overflow-hidden px-5 py-2 text-white justify-center rounded-full bg-gray-950 leading-5'
-                  href='/'
-                >
-                  Contact
-                </Link>
+                <NavButton>Contact</NavButton>
               </div>
             </div>
           </div>
