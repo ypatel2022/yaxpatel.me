@@ -1,0 +1,37 @@
+[
+  {
+    "position": "Code Sensei",
+    "company": "Code Ninjas",
+    "href": "https://www.codeninjas.com/",
+    "timeline": "Jul 2021 - Jun 2022",
+    "description": "Taught students the programming fundamentals in JavaScript and Python by developing games."
+  },
+  {
+    "position": "Creator & Developer",
+    "company": "Mash Backslash Studios",
+    "href": "https://mash-backslash-studios.itch.io/",
+    "timeline": "Nov 2020 - Jul 2022",
+    "description": "Worked with and lead a team that is dedicated to game development and involved in game jams!"
+  },
+  {
+    "position": "Club Member",
+    "company": "GDSC",
+    "href": "https://gdsc.community.dev/",
+    "timeline": "Sep 2022 - Present",
+    "description": "Participate in Google Developer Student Club events and workshops to learn about new technologies. Currently a part of the McMaster University Solutions Incubator program."
+  },
+  {
+    "position": "Delegate Member",
+    "company": "DECA",
+    "href": "https://deca.ca/",
+    "timeline": "Oct 2020 - Jun 2022",
+    "description": "Participated in DECA case study competitions and reached the provincial competition level."
+  },
+  {
+    "position": "Volunteer Reading Tutor",
+    "company": "HPL",
+    "href": "https://www.hpl.ca/",
+    "timeline": "Jul 2019 - Aug 2019",
+    "description": "Worked with other volunteers to read with kids from ages 7-11 helping and motivating them to read."
+  }
+]

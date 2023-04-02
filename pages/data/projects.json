@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Study Spot",
+    "description": "Track how long you've been working in the library, then compete and show off your progress with an NFT! Won 'Most Creative Use of Verbwire API' at DeltaHacks IX. Developed using Next.js, TypeScript, Firebase, and Tailwind CSS.",
+    "imageName": "chessbot",
+    "timeline": "Jan 2023",
+    "links": [
+      {
+        "name": "Devpost",
+        "link": "https://devpost.com/software/study-spot-daxwm9"
+      },
+      {
+        "name": "GitHub Repository",
+        "link": "https://github.com/ypatel2022/study-spot"
+      }
+    ]
+  },
+  {
+    "title": "Chess Bot",
+    "description": "Compete against an AI chess opponent, which I made for my ISC4U final project. It was made in Unity using C#.",
+    "imageName": "chessbot",
+    "timeline": "Apr 2022 - Jul 2022",
+    "links": [
+      {
+        "name": "GitHub Repository",
+        "link": "https://github.com/ypatel2022/chess-bot"
+      }
+    ]
+  },
+  {
+    "title": "mflix",
+    "description": "A place to search and discover movies. This database contains over 20,000 movies, with data such as actors, ratings, release date, etc. It was developed using Next.js, MongoDB Atlas, and Tailwind CSS.",
+    "imageName": "mflix",
+    "timeline": "Jan 2022",
+    "links": [
+      {
+        "name": "GitHub Repository",
+        "link": "https://github.com/ypatel2022/mflix"
+      },
+      {
+        "name": "Deployed App",
+        "link": "https://mflix-ypatel2022.vercel.app/movies"
+      }
+    ]
+  },
+  {
+    "title": "Backend Bruno",
+    "description": "A zombie-survival/shooter game with an emphasis on verticality! Developed in Unity 3D and C# by Mash Backslash Studios.",
+    "imageName": "backendbruno",
+    "timeline": "Nov 2020 - Aug 2021",
+    "links": [
+      {
+        "name": "Download on Itch.io",
+        "link": "https://mash-backslash-studios.itch.io/backend-bruno"
+      }
+    ]
+  },
+  {
+    "title": "Markdown Blog",
+    "description": "Create styled blog posts using markdown. Developed using Express.js, Tailwind CSS, MongoDB, and EJS.",
+    "imageName": "markdownblog",
+    "timeline": "Jul 2021",
+    "links": [
+      {
+        "name": "GitHub Repository",
+        "link": "https://github.com/ypatel2022/markdown-blog"
+      },
+      {
+        "name": "Deployed App",
+        "link": "https://markdown-blog-ypatel2022.herokuapp.com/"
+      }
+    ]
+  },
+  {
+    "title": "Emergency!",
+    "description": "Tackle emergency situations with step-by-step instructions using Emergency! Developed for the MERGE 2021 Hack + Policython in the healthcare track.",
+    "imageName": "emergency",
+    "timeline": "Mar 2021",
+    "links": [
+      {
+        "name": "Devpost",
+        "link": "https://devpost.com/software/emergency-for-merge-2021"
+      },
+      {
+        "name": "GitHub Repository",
+        "link": "https://github.com/ypatel2022/emergency"
+      }
+    ]
+  },
+  {
+    "title": "Verifme",
+    "description": "A Reddit-like platform for remote students. Canadian high school students can share posts about homework problems they're struggling with. Won first place at the PTC Code Against Covid Hackathon. Built using Express.js, EJS, and Bootstrap.",
+    "imageName": "verifme",
+    "timeline": "Feb 2021",
+    "links": [
+      {
+        "name": "Devpost",
+        "link": "https://devpost.com/software/verifme"
+      },
+      {
+        "name": "GitHub Repository",
+        "link": "https://github.com/ypatel2022/code-against-covid"
+      },
+      {
+        "name": "Deployed App",
+        "link": "https://stark-earth-94197.herokuapp.com/"
+      }
+    ]
+  }
+]
