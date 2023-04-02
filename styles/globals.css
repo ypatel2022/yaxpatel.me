@@ -1,3 +1,49 @@
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+* use
+* font-variation-settings: 'wght' 500;
+
+*/
+
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src: url('/assets/Satoshi/Satoshi-Variable.woff2') format('woff2'),
+    url('/assets/Satoshi/Satoshi-Variable.woff') format('woff'),
+    url('/assets/Satoshi/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-VariableItalic';
+  src: url('/assets/Satoshi/Satoshi-VariableItalic.woff2') format('woff2'),
+    url('/assets/Satoshi/Satoshi-VariableItalic.woff') format('woff'),
+    url('/assets/Satoshi/Satoshi-VariableItalic.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  background-color: #fffdf3;
+  font-family: 'Satoshi-Variable', sans-serif;
+}
+
+h1 {
+  font-variation-settings: 'wght' 500;
+}

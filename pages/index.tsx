@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -13,7 +14,21 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main>Hello, world!</main>
+
+      <nav className='flex text-xl p-4'>
+        <Link href='/'>Yax Patel</Link>
+        <Link href='/#about'>About</Link>
+        <Link href='/#experiences'>Experience</Link>
+        <Link href='/#projects'>Projects</Link>
+        <Link href='/#contact'>Contact</Link>
+        <Link href='/Yax_Patel_Resume.pdf'>Resume</Link>
+      </nav>
+
+      <main>
+        <h1 className='text-9xl'>YAX PATEL</h1>A Software Engineering student at
+        McMaster University. I'm passionate about creating innovative software
+        solutions.
+      </main>
     </>
   )
 }
