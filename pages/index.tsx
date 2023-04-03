@@ -8,6 +8,9 @@ import LogoIcon from '@/components/icons/LogoIcon'
 import React, { useState } from 'react'
 import MobileNavLink from '@/components/MobileNavLink'
 import MobileContactButton from '@/components/MobileContactButton'
+import projects from './data/projects.json'
+import Project from '@/components/Project'
+import { ProjectType } from '@/types'
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -33,7 +36,7 @@ export default function Home() {
       </Head>
 
       <nav
-        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-50 w-full py-5 text-[0.875em] md:bg-transparent md:text-black ${
+        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-50 w-full bg-transparent py-5 text-[0.875em] md:bg-light md:text-black ${
           menuOpen ? 'bg-gray-950 text-white' : ''
         }`}
       >
@@ -81,7 +84,7 @@ export default function Home() {
             menuOpen ? '-translate-x-0' : '-translate-x-full'
           }`}
         >
-          <div className="grid grid-cols-1 gap-4 pt-4">
+          <div className="pointer-events-none grid select-none grid-cols-1 gap-4 pt-4">
             <MobileNavLink setMenuOpen={setMenuOpen} href="/#about">
               about
             </MobileNavLink>
@@ -102,10 +105,25 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="mt-56">
-        <h1 className="text-9xl">YAX PATEL</h1>A Software Engineering student at
-        McMaster University. I&apos;m passionate about creating innovative
-        software solutions.
+      <main className="">
+        <section>
+          <div className="mx-auto flex h-screen max-w-7xl flex-col justify-center">
+            <h1 className="text-9xl">YAX PATEL</h1>
+            <p className="text-4xl">
+              A Software Engineering student at McMaster University.
+              <br />
+              I&apos;m passionate about creating innovative software solutions.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <div className="grid grid-cols-1 pt-4">
+            {projects.map((project: ProjectType, index: number) => (
+              <Project key={index} index={index} data={project} />
+            ))}
+          </div>
+        </section>
       </main>
     </>
   )

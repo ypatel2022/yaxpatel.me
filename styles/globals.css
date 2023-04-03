@@ -41,9 +41,12 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   background-color: #fffdf3;
+  color: #161618;
   font-family: 'Satoshi-Variable', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @apply select-none selection:bg-gray-950 selection:text-[#fffdf3] md:select-text;
 }
 
 h1 {
@@ -63,6 +66,17 @@ nav:after {
   margin: 0 auto;
   left: 0;
   right: 0;
+}
+
+bg-project-image {
+  height: 100%;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: background 1.5s linear;
+  -moz-transition: background 1.5s linear;
+  -o-transition: background 1.5s linear;
+  -ms-transition: background 1.5s linear;
+  transition: background 1.5s linear;
 }
 
 @layer components {
