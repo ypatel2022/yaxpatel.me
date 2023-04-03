@@ -10,7 +10,7 @@ export default function ContactButton() {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       href="/#contact"
-      className="relative flex items-center justify-center overflow-hidden rounded-full bg-gray-950 px-5 py-2 leading-5 text-[#fffdf3]"
+      className="relative flex items-center justify-center overflow-hidden rounded-full bg-dark px-5 py-2 leading-5 text-light"
     >
       <div className="w-full">
         <div

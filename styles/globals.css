@@ -46,7 +46,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @apply select-none selection:bg-gray-950 selection:text-[#fffdf3] md:select-text;
+  @apply selection:bg-dark selection:text-light;
 }
 
 h1 {
