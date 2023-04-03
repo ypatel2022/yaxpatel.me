@@ -36,7 +36,7 @@ export default function Home() {
       </Head>
 
       <nav
-        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-50 w-full bg-transparent py-5 text-[0.875em] md:bg-light md:text-black ${
+        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-50 w-full py-5 text-[0.875em] md:bg-light md:text-black ${
           menuOpen ? 'bg-gray-950 text-white' : ''
         }`}
       >
