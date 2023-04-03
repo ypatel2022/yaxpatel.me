@@ -11,7 +11,7 @@ export default function MobileNavLink({
   setMenuOpen: (open: boolean) => void
 }) {
   return (
-    <div className="relative inline-block items-center justify-center px-2 py-2 text-2xl">
+    <div className="relative inline-block items-center justify-center py-2 text-2xl">
       <Link
         onClick={() => setMenuOpen(false)}
         href={href}
