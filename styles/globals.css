@@ -50,13 +50,19 @@ h1 {
   font-variation-settings: 'wght' 500;
 }
 
-.nav-center {
-  grid-column-gap: 3.5rem;
-}
-
-.nav-right {
-  grid-column-gap: 3rem;
-  grid-row-gap: 0rem;
+nav:after {
+  content: '';
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  max-width: 80rem;
+  /* center */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 
 @layer components {
@@ -80,5 +86,9 @@ h1 {
   }
   .wght-900 {
     font-variation-settings: 'wght' 900;
+  }
+
+  .transition-ease-in-out {
+    transition: all 0.3s ease-in-out;
   }
 }

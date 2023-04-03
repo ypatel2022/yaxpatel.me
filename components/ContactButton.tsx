@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
-import RightArrow from './icons/RightArrow'
-
-const innerText = <div className='flex items-center gap-2'>Contact</div>
+import RightArrowIcon from './icons/RightArrowIcon'
 
 export default function ContactButton() {
   const [hover, setHover] = useState(false)
@@ -11,41 +9,40 @@ export default function ContactButton() {
     <Link
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      data-w-id='bfa746bb-bd94-d011-484b-676472e00a82'
-      href='/#contact'
-      className='overflow-hidden px-5 py-2 text-white flex items-center justify-center rounded-full bg-gray-950 leading-5'
+      href="/#contact"
+      className="flex items-center justify-center overflow-hidden rounded-full bg-gray-950 px-5 py-2 leading-5 text-white"
     >
-      <div className='w-full'>
+      <div className="w-full">
         <div
-          className={`transition-transform w-full ease-in-out duration-300 ${
+          className={`w-full transition-transform duration-300 ease-in-out ${
             hover && '-translate-y-12'
           }`}
         >
-          {innerText}
+          <div className="flex items-center gap-2">Contact</div>
         </div>
         <div
-          className={`absolute select-none pointer-events-none transition-transform ease-in-out duration-300 ${
+          className={`pointer-events-none absolute select-none transition-transform duration-300 ease-in-out ${
             hover ? '-translate-y-5' : 'translate-y-2'
           }`}
         >
-          {innerText}
+          <div className="flex items-center gap-2">Contact</div>
         </div>
       </div>
 
-      <div className='w-full'>
+      <div className="w-full">
         <div
-          className={`transition-transform w-full ease-in-out duration-700 ${
+          className={`w-full transition-transform duration-700 ease-in-out ${
             hover && '-translate-y-12'
           }`}
         >
-          <RightArrow />
+          <RightArrowIcon />
         </div>
         <div
-          className={`absolute select-none pointer-events-none transition-transform ease-in-out duration-700 ${
+          className={`pointer-events-none absolute select-none transition-transform duration-700 ease-in-out ${
             hover ? '-translate-y-6' : 'translate-y-2'
           }`}
         >
-          <RightArrow />
+          <RightArrowIcon />
         </div>
       </div>
     </Link>
