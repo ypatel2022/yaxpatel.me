@@ -1,5 +1,21 @@
 [
   {
+    "title": "Billow",
+    "description": "A place to keep track of all of your bills to manage your money. Won overall third place at the Google Developer Student Clubs McMaster Solutions Incubator. Developed using Next.js, TypeScript, Firebase, and Tailwind CSS.",
+    "imageName": "chessbot",
+    "timeline": "Jan 2023",
+    "links": [
+      {
+        "name": "Devpost",
+        "link": "https://devpost.com/software/study-spot-daxwm9"
+      },
+      {
+        "name": "GitHub Repository",
+        "link": "https://github.com/ypatel2022/study-spot"
+      }
+    ]
+  },
+  {
     "title": "Study Spot",
     "description": "Track how long you've been working in the library, then compete and show off your progress with an NFT! Won 'Most Creative Use of Verbwire API' at DeltaHacks IX. Developed using Next.js, TypeScript, Firebase, and Tailwind CSS.",
     "imageName": "chessbot",

@@ -24,11 +24,11 @@ export default function Project({
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className={`box bg-project-image w-full text-neutral-900 transition-all hover:text-white ${randomBackground()}`}
+      className={`w-full px-10 text-neutral-900 transition-all hover:text-white xl:px-0 ${randomBackground()}`}
       style={{
         background: hover
-          ? `url(/project-background-${index + 1}.png)`
-          : `url(/project-background-default.png)`,
+          ? `url(/project-backgrounds/project-background-${index + 1}.png)`
+          : `url(/project-backgrounds/project-background-default.png)`,
       }}
     >
       <div className="mx-auto grid w-full max-w-7xl grid-cols-8 items-center gap-4 py-8">

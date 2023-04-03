@@ -36,8 +36,8 @@ export default function Home() {
       </Head>
 
       <nav
-        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-50 w-full py-5 text-[0.875em] md:bg-light md:text-black ${
-          menuOpen ? 'bg-gray-950 text-white' : ''
+        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-10 w-full py-5 text-sm md:bg-light md:text-black ${
+          menuOpen ? 'bg-gray-950 text-white' : 'bg-light'
         }`}
       >
         <div
@@ -59,7 +59,7 @@ export default function Home() {
             </div>
           </Link>
 
-          <div className="hidden flex-1 items-center justify-end gap-14 md:flex">
+          <div className="hidden flex-1 items-center justify-end gap-10 md:flex lg:gap-14">
             <NavLink href="/#about">About</NavLink>
             <NavLink href="/#experience">Experience</NavLink>
             <NavLink href="/#projects">Projects</NavLink>
@@ -77,37 +77,33 @@ export default function Home() {
             </button>
           </div>
         </div>
-
-        {/* mobile menu */}
-        <div
-          className={`transition-ease-in-out mt-5 h-screen w-full border-t border-gray-500 bg-gray-950 px-10 text-white transition-all md:hidden ${
-            menuOpen ? '-translate-x-0' : '-translate-x-full'
-          }`}
-        >
-          <div className="pointer-events-none grid select-none grid-cols-1 gap-4 pt-4">
-            <MobileNavLink setMenuOpen={setMenuOpen} href="/#about">
-              about
-            </MobileNavLink>
-            <MobileNavLink setMenuOpen={setMenuOpen} href="/#experience">
-              experience
-            </MobileNavLink>
-            <MobileNavLink setMenuOpen={setMenuOpen} href="/#projects">
-              projects
-            </MobileNavLink>
-            <MobileNavLink
-              setMenuOpen={setMenuOpen}
-              href="/Yax_Patel_Resume.pdf"
-            >
-              resume
-            </MobileNavLink>
-            <MobileContactButton />
-          </div>
-        </div>
       </nav>
+      {/* mobile menu */}
+      <div
+        className={`transition-ease-in-out fixed z-50 mt-[4.25rem] h-screen w-full border-t border-gray-500 bg-gray-950 px-10 text-white transition-all md:hidden ${
+          menuOpen ? '-translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="grid select-none grid-cols-1 gap-4 pt-4">
+          <MobileNavLink setMenuOpen={setMenuOpen} href="/#about">
+            about
+          </MobileNavLink>
+          <MobileNavLink setMenuOpen={setMenuOpen} href="/#experience">
+            experience
+          </MobileNavLink>
+          <MobileNavLink setMenuOpen={setMenuOpen} href="/#projects">
+            projects
+          </MobileNavLink>
+          <MobileNavLink setMenuOpen={setMenuOpen} href="/Yax_Patel_Resume.pdf">
+            resume
+          </MobileNavLink>
+          <MobileContactButton />
+        </div>
+      </div>
 
       <main className="">
         <section>
-          <div className="mx-auto flex h-screen max-w-7xl flex-col justify-center">
+          <div className="mx-auto flex h-screen  max-w-7xl flex-col justify-center px-10 xl:px-0">
             <h1 className="text-9xl">YAX PATEL</h1>
             <p className="text-4xl">
               A Software Engineering student at McMaster University.
