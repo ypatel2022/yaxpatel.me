@@ -65,7 +65,9 @@ export default function Project({
 
           <div className="mt-4 flex gap-4">
             {data.links.map((link) => (
-              <ExternalLink href={link.link}>{link.name}</ExternalLink>
+              <ExternalLink key={link.name} href={link.link}>
+                {link.name}
+              </ExternalLink>
             ))}
           </div>
         </div>
