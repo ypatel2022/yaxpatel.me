@@ -26,7 +26,7 @@ export default function Home() {
           content="Portfolio, Web Developer, Software Engineer, McMaster University, McMaster University Engineering, McMaster University Software Engineering, Software Engineering, Yax Patel, Yax"
         />
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="1 days" />
         <meta name="author" content="Yax Patel" />
