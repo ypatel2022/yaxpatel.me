@@ -3,8 +3,6 @@ import React, { useState } from 'react'
 import RightArrowIcon from './icons/RightArrowIcon'
 
 export default function MobileContactButton() {
-  const [hover, setHover] = useState(false)
-
   return (
     <Link
       href="/#contact"

@@ -34,7 +34,11 @@ export default function Home() {
             href="/"
           >
             <div className="flex items-center gap-2">
-              <div className="-rotate-45 transition-transform duration-200 ease-in-out group-hover:rotate-45">
+              <div
+                className={`-rotate-45 transition-transform duration-200 ease-in-out group-hover:rotate-45 ${
+                  menuOpen && 'rotate-45'
+                }`}
+              >
                 <LogoIcon />
               </div>
               Yax Patel
@@ -66,10 +70,21 @@ export default function Home() {
           }`}
         >
           <div className="grid grid-cols-1 gap-4 pt-4">
-            <MobileNavLink href="/#about">about</MobileNavLink>
-            <MobileNavLink href="/#experience">experience</MobileNavLink>
-            <MobileNavLink href="/#projects">projects</MobileNavLink>
-            <MobileNavLink href="/Yax_Patel_Resume.pdf">resume</MobileNavLink>
+            <MobileNavLink setMenuOpen={setMenuOpen} href="/#about">
+              about
+            </MobileNavLink>
+            <MobileNavLink setMenuOpen={setMenuOpen} href="/#experience">
+              experience
+            </MobileNavLink>
+            <MobileNavLink setMenuOpen={setMenuOpen} href="/#projects">
+              projects
+            </MobileNavLink>
+            <MobileNavLink
+              setMenuOpen={setMenuOpen}
+              href="/Yax_Patel_Resume.pdf"
+            >
+              resume
+            </MobileNavLink>
             <MobileContactButton />
           </div>
         </div>
