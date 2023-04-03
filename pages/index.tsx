@@ -11,6 +11,7 @@ import MobileContactButton from '@/components/MobileContactButton'
 import projects from './data/projects.json'
 import Project from '@/components/Project'
 import { ProjectType } from '@/types'
+import ExternalLink from '@/components/ExternalLink'
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -103,9 +104,9 @@ export default function Home() {
 
       <main className="">
         <section>
-          <div className="mx-auto flex h-screen  max-w-7xl flex-col justify-center px-10 xl:px-0">
-            <h1 className="text-9xl">YAX PATEL</h1>
-            <p className="text-4xl">
+          <div className="mx-auto flex h-screen max-w-7xl flex-col justify-center px-10 xl:px-0">
+            <h1 className="text-5xl md:text-9xl">YAX PATEL</h1>
+            <p className="text-2xl md:text-4xl">
               A Software Engineering student at McMaster University.
               <br />
               I&apos;m passionate about creating innovative software solutions.
@@ -113,13 +114,44 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
-          <div className="grid grid-cols-1 pt-4">
+        <section id="projects">
+          <div className="wght-700 mb-8 max-w-7xl px-10 text-6xl xl:px-0">
+            Projects
+          </div>
+
+          <div className="hidden grid-cols-1 pt-4 md:grid">
             {projects.map((project: ProjectType, index: number) => (
               <Project key={index} index={index} data={project} />
             ))}
           </div>
+          {/* <MobileCarousel projects={projects} /> */}
+
+          <div className="grid grid-cols-1 gap-5 md:hidden">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="mx-5 max-h-fit rounded-xl p-4 text-white"
+                style={{
+                  background: `url(/project-backgrounds/project-background-${
+                    index + 1
+                  }.png)`,
+                }}
+              >
+                <div className="wght-600 text-4xl">{project.title}</div>
+                <div className="text-xl">{project.description}</div>
+                <div className="mt-4 flex flex-col gap-2">
+                  {project.links.map((link, index) => (
+                    <ExternalLink key={index} href={link.link}>
+                      {link.name}
+                    </ExternalLink>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
+
+        <section className=""></section>
       </main>
     </>
   )
