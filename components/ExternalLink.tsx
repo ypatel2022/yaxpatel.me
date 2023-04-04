@@ -14,7 +14,7 @@ export default function ExternalLink({
       target="_blank"
       rel="noopener noreferrer"
       href={href}
-      className="group relative flex max-w-fit items-center justify-center gap-4 overflow-hidden rounded-full bg-light px-5 py-2 leading-5 text-dark"
+      className="group relative flex max-w-fit items-center justify-center gap-4 overflow-hidden rounded-full bg-light px-5 py-2 leading-5 text-dark md:bg-dark md:text-light"
     >
       <div className="w-full">
         <div className="w-full transition-transform duration-300 ease-in-out group-hover:-translate-y-12">

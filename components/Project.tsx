@@ -16,11 +16,11 @@ export default function Project({
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="project w-full px-10 text-neutral-900 transition-all hover:text-white xl:px-0"
+      className="project w-full bg-center px-10 text-white transition-all xl:px-0"
       style={{
         background: hover
           ? `url(/project-backgrounds/project-background-${index + 1}.png)`
-          : `url(/project-backgrounds/project-background-default.png)`,
+          : `url(/project-backgrounds/project-background-default-dark.png)`,
       }}
     >
       <div className="mx-auto grid w-full max-w-7xl grid-cols-8 items-center gap-4 py-8">

@@ -40,13 +40,11 @@ html,
 body {
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
-  background-color: #fffdf3;
-  color: #161618;
   font-family: 'Satoshi-Variable', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  @apply selection:bg-dark selection:text-light;
+  @apply bg-dark text-light selection:bg-light selection:text-dark;
 }
 
 /* preload images */
@@ -73,7 +71,7 @@ h1 {
 
 nav:after {
   content: '';
-  background: black;
+  background: #2f2f32;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -126,7 +124,7 @@ bg-project-image {
 
   .project:after {
     content: '';
-    background: #f1efe2;
+    background: #2f2f32;
     position: absolute;
     /* bottom: 0; */
     /* left: 0; */

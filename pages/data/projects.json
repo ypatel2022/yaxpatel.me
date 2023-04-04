@@ -12,6 +12,10 @@
       {
         "name": "GitHub",
         "link": "https://github.com/ypatel2022/study-spot"
+      },
+      {
+        "name": "Deployed App",
+        "link": "https://billow-solutions-challenge.vercel.app/"
       }
     ]
   },
@@ -116,10 +120,6 @@
       {
         "name": "GitHub",
         "link": "https://github.com/ypatel2022/code-against-covid"
-      },
-      {
-        "name": "Deployed App",
-        "link": "https://stark-earth-94197.herokuapp.com/"
       }
     ]
   }

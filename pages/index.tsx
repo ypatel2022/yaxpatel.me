@@ -5,7 +5,6 @@ import NavLink from '@/components/NavLink'
 import ContactButton from '@/components/ContactButton'
 import React, { useState } from 'react'
 import MobileNavLink from '@/components/MobileNavLink'
-import MobileContactButton from '@/components/MobileContactButton'
 import projects from './data/projects.json'
 import Project from '@/components/Project'
 import { ProjectType } from '@/types'
@@ -15,6 +14,7 @@ import {
   ExternalLink,
   LogoIcon,
   MenuIcon,
+  RightArrowIcon,
 } from '@/components/icons'
 
 export default function Home() {
@@ -41,9 +41,7 @@ export default function Home() {
       </Head>
 
       <nav
-        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-10 w-full py-5 text-sm md:bg-light md:text-dark ${
-          menuOpen ? 'bg-dark text-white' : 'bg-light'
-        }`}
+        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-10 w-full bg-dark py-5 text-sm md:bg-dark md:text-light ${''}`}
       >
         <div
           className={`ml-auto mr-auto flex max-w-7xl items-center justify-between px-10 xl:px-0`}
@@ -51,6 +49,7 @@ export default function Home() {
           <Link
             className="wght-600 group w-full flex-grow justify-between"
             href="/"
+            onClick={() => setMenuOpen(false)}
           >
             <div className="flex items-center gap-2">
               <div
@@ -85,7 +84,7 @@ export default function Home() {
       </nav>
       {/* mobile menu */}
       <div
-        className={`transition-ease-in-out fixed z-50 mt-[4.25rem] h-screen w-full border-t border-gray-500 bg-dark px-10 text-white transition-all md:hidden ${
+        className={`transition-ease-in-out fixed z-50 mt-[4.25rem] h-screen w-full border-t border-[#2f2f32] bg-dark px-10 text-white transition-all md:hidden ${
           menuOpen ? '-translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -102,17 +101,27 @@ export default function Home() {
           <MobileNavLink setMenuOpen={setMenuOpen} href="/Yax_Patel_Resume.pdf">
             resume
           </MobileNavLink>
-          <MobileContactButton />
+
+          <Link
+            href="/#contact"
+            className="my-2 flex max-w-fit items-center justify-center overflow-hidden rounded-full bg-light px-5 py-3 text-2xl leading-5 text-dark"
+          >
+            <div className="flex w-full gap-4">
+              <div className="flex items-center gap-2">Contact</div>
+              <RightArrowIcon />
+            </div>
+          </Link>
         </div>
       </div>
 
       <main className="">
         <section className="w-full">
           <div className="mx-auto flex h-screen max-w-7xl flex-col justify-center px-10 xl:px-0">
-            {/* <div className="relative translate-y-24 overflow-hidden bg-dark text-9xl text-light">
+            {/* <div className="relative translate-y-24 overflow-hidden bg-light text-9xl text-dark">
               <div>TEST</div>
             </div> */}
             {/* position: relative; display: inline-block; transform: translate(0px, 0%); */}
+
             <h1 className="wght-600 text-5xl md:text-9xl">Yax Patel</h1>
             <p className="text-2xl md:text-4xl">
               A Software Engineering student at McMaster University.
@@ -169,7 +178,12 @@ export default function Home() {
           </div>
 
           <div>
-            <Link className="" href="https://github.com/ypatel2022/yaxpatel.me">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              className=""
+              href="https://github.com/ypatel2022/yaxpatel.me"
+            >
               <div className="text-center transition-all hover:scale-110">
                 <GitHubIcon />
               </div>

@@ -8,8 +8,8 @@ export const config = {
 
 export default async function handler(req: NextRequest) {
   /*
-    'linear-gradient(to bottom right, #127adc 25%, #2d88de 50%, #4197e8 75%)',
-    'linear-gradient(to bottom right, #ffa07a 25%, #ff753d 50%, #ff4500 75%)',
+    'linear-gradient(to bottom right, #127adc 25%, #2d88de 40%, #4197f8 75%)',
+    'linear-gradient(to bottom right, #ffa07a 15%, #ff753d 40%, #ff4500 75%)',
     'linear-gradient(to bottom right, #020004 25%, #0d001b 50%, #100020 75%)',
     'linear-gradient(to bottom right, #26293f 25%, #304758 50%, #37777d 75%)',
     'linear-gradient(to bottom right, #28d9bc 25%, #30d9be 50%, #7de7d6 75%)',
@@ -26,7 +26,7 @@ export default async function handler(req: NextRequest) {
           width: '100%',
           display: 'flex',
           backgroundImage:
-            'linear-gradient(to top right, #fffdf3 0%, #fffdf3 60%, #fffdf3 95%)',
+            'linear-gradient(to bottom right, #020004 25%, #110024 50%, #190033 75%)',
         }}
       ></div>
     ),
