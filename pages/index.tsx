@@ -3,15 +3,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 import NavLink from '@/components/NavLink'
 import ContactButton from '@/components/ContactButton'
-import MenuIcon from '@/components/icons/MenuIcon'
-import LogoIcon from '@/components/icons/LogoIcon'
 import React, { useState } from 'react'
 import MobileNavLink from '@/components/MobileNavLink'
 import MobileContactButton from '@/components/MobileContactButton'
 import projects from './data/projects.json'
 import Project from '@/components/Project'
 import { ProjectType } from '@/types'
-import ExternalLink from '@/components/ExternalLink'
+
+import {
+  GitHubIcon,
+  ExternalLink,
+  LogoIcon,
+  MenuIcon,
+} from '@/components/icons'
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -42,7 +46,7 @@ export default function Home() {
         }`}
       >
         <div
-          className={`ml-auto mr-auto flex max-w-7xl items-center justify-between px-10 xl:px-0 `}
+          className={`ml-auto mr-auto flex max-w-7xl items-center justify-between px-10 xl:px-0`}
         >
           <Link
             className="wght-600 group w-full flex-grow justify-between"
@@ -114,18 +118,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects">
-          <div className="wght-700 mb-8 max-w-7xl px-10 text-6xl xl:px-0">
-            Projects
+        <section id="projects" className="scroll-m-24 md:scroll-m-28">
+          <div className="wght-700 md:project mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
+            <div className="pb-8">Projects</div>
           </div>
 
-          <div className="hidden grid-cols-1 pt-4 md:grid">
+          <div className="hidden grid-cols-1 md:grid">
             {projects.map((project: ProjectType, index: number) => (
               <Project key={index} index={index} data={project} />
             ))}
           </div>
-          {/* <MobileCarousel projects={projects} /> */}
 
+          {/* mobile version */}
           <div className="grid grid-cols-1 gap-5 md:hidden">
             {projects.map((project, index) => (
               <div
@@ -153,6 +157,22 @@ export default function Home() {
 
         <section className=""></section>
       </main>
+
+      <footer className="wght-500 w-full py-6">
+        <div className="ml-auto mr-auto flex max-w-7xl items-center px-10 xl:px-0">
+          <div className="flex-grow">
+            &copy; {new Date().getFullYear()} All Rights Reserved.
+          </div>
+
+          <div>
+            <Link className="" href="https://github.com/ypatel2022/yaxpatel.me">
+              <div className="text-center transition-all hover:scale-110">
+                <GitHubIcon />
+              </div>
+            </Link>
+          </div>
+        </div>
+      </footer>
     </>
   )
 }

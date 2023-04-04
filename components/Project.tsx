@@ -16,7 +16,7 @@ export default function Project({
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="w-full px-10 text-neutral-900 transition-all hover:text-white xl:px-0"
+      className="project w-full px-10 text-neutral-900 transition-all hover:text-white xl:px-0"
       style={{
         background: hover
           ? `url(/project-backgrounds/project-background-${index + 1}.png)`

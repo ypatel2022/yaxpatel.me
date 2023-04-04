@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function NavLink({
   children,
@@ -8,16 +8,9 @@ export default function NavLink({
   children: React.ReactNode
   href: string
 }) {
-  const [hover, setHover] = useState(false)
-
   return (
     <div className="relative inline-block items-center justify-center px-2 text-center">
-      <Link
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        href={href}
-        className="inline-block text-center"
-      >
+      <Link href={href} className="inline-block text-center">
         <div className="invisible relative left-0 top-0 w-full text-center">
           {children}
         </div>
