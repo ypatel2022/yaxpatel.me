@@ -41,8 +41,8 @@ export default function Home() {
       </Head>
 
       <nav
-        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-10 w-full py-5 text-sm md:bg-light md:text-black ${
-          menuOpen ? 'bg-gray-950 text-white' : 'bg-light'
+        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-10 w-full py-5 text-sm md:bg-light md:text-dark ${
+          menuOpen ? 'bg-dark text-white' : 'bg-light'
         }`}
       >
         <div
@@ -85,7 +85,7 @@ export default function Home() {
       </nav>
       {/* mobile menu */}
       <div
-        className={`transition-ease-in-out fixed z-50 mt-[4.25rem] h-screen w-full border-t border-gray-500 bg-gray-950 px-10 text-white transition-all md:hidden ${
+        className={`transition-ease-in-out fixed z-50 mt-[4.25rem] h-screen w-full border-t border-gray-500 bg-dark px-10 text-white transition-all md:hidden ${
           menuOpen ? '-translate-x-0' : '-translate-x-full'
         }`}
       >
