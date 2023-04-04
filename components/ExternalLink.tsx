@@ -31,7 +31,7 @@ export default function ExternalLink({
         <div className="w-full transition-transform duration-700 ease-in-out group-hover:-translate-y-12">
           <ExternalLinkIcon />
         </div>
-        <div className="pointer-events-none absolute translate-y-2 select-none transition-transform duration-700 ease-in-out group-hover:-translate-y-6">
+        <div className="pointer-events-none absolute translate-y-2 select-none transition-transform duration-700 ease-in-out group-hover:-translate-y-5">
           <ExternalLinkIcon />
         </div>
       </div>

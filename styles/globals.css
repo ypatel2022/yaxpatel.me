@@ -45,7 +45,7 @@ body {
   font-family: 'Satoshi-Variable', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  scroll-behavior: smooth;
   @apply selection:bg-dark selection:text-light;
 }
 
@@ -122,5 +122,20 @@ bg-project-image {
 
   .transition-ease-in-out {
     transition: all 0.3s ease-in-out;
+  }
+
+  .project:after {
+    content: '';
+    background: #f1efe2;
+    position: absolute;
+    /* bottom: 0; */
+    /* left: 0; */
+    height: 1px;
+    width: 100%;
+    max-width: 80rem;
+    /* center */
+    margin: auto;
+    left: 0;
+    right: 0;
   }
 }
