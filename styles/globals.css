@@ -49,6 +49,24 @@ body {
   @apply selection:bg-dark selection:text-light;
 }
 
+/* preload images */
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url('/project-backgrounds/project-background-default.png')
+    url('/project-backgrounds/project-background-1.png')
+    url('/project-backgrounds/project-background-2.png')
+    url('/project-backgrounds/project-background-3.png')
+    url('/project-backgrounds/project-background-4.png')
+    url('/project-backgrounds/project-background-5.png')
+    url('/project-backgrounds/project-background-6.png')
+    url('/project-backgrounds/project-background-7.png')
+    url('/project-backgrounds/project-background-8.png');
+}
+
 h1 {
   font-variation-settings: 'wght' 500;
 }
