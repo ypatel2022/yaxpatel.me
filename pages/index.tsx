@@ -107,9 +107,13 @@ export default function Home() {
       </div>
 
       <main className="">
-        <section>
+        <section className="w-full">
           <div className="mx-auto flex h-screen max-w-7xl flex-col justify-center px-10 xl:px-0">
-            <h1 className="text-5xl md:text-9xl">YAX PATEL</h1>
+            {/* <div className="relative translate-y-24 overflow-hidden bg-dark text-9xl text-light">
+              <div>TEST</div>
+            </div> */}
+            {/* position: relative; display: inline-block; transform: translate(0px, 0%); */}
+            <h1 className="wght-600 text-5xl md:text-9xl">Yax Patel</h1>
             <p className="text-2xl md:text-4xl">
               A Software Engineering student at McMaster University.
               <br />

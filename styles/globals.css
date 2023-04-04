@@ -49,10 +49,6 @@ body {
   @apply selection:bg-dark selection:text-light;
 }
 
-h1 {
-  font-variation-settings: 'wght' 500;
-}
-
 nav:after {
   content: '';
   background: black;
