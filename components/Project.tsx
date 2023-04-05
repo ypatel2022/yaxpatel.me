@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import type { ProjectType } from '@/types'
-import Link from 'next/link'
-import ExternalLinkIcon from './icons/ExternalLinkIcon'
+import { ExternalLinkIcon } from './icons'
 import ExternalLink from './ExternalLink'
+
 export default function Project({
   data,
   index,

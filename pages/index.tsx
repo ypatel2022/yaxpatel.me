@@ -1,21 +1,27 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import NavLink from '@/components/NavLink'
-import ContactButton from '@/components/ContactButton'
 import React, { useState } from 'react'
-import MobileNavLink from '@/components/MobileNavLink'
-import projects from './data/projects.json'
-import Project from '@/components/Project'
+import Head from 'next/head'
+
+import {
+  NavLink,
+  ContactButton,
+  MobileNavLink,
+  ExternalLink,
+  Project,
+  Cursor,
+} from '@/components'
+
 import { ProjectType } from '@/types'
+
+import projects from './data/projects.json'
 
 import {
   GitHubIcon,
-  ExternalLink,
+  ExternalLinkIcon,
   LogoIcon,
   MenuIcon,
   RightArrowIcon,
 } from '@/components/icons'
+import Link from 'next/link'
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -41,17 +47,17 @@ export default function Home() {
       </Head>
 
       <nav
-        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-10 w-full bg-dark py-5 text-sm md:bg-dark md:text-light ${''}`}
+        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-50 w-full bg-dark py-5 text-sm md:bg-dark md:text-light ${''}`}
       >
         <div
           className={`ml-auto mr-auto flex max-w-7xl items-center justify-between px-10 xl:px-0`}
         >
           <Link
-            className="wght-600 group w-full flex-grow justify-between"
+            className="wght-600 mouse-hover-sm group w-full flex-grow justify-between"
             href="/"
             onClick={() => setMenuOpen(false)}
           >
-            <div className="flex items-center gap-2">
+            <div className="mouse-hover-sm flex items-center gap-2">
               <div
                 className={`-rotate-45 transition-transform duration-200 ease-in-out group-hover:rotate-45 ${
                   menuOpen && 'rotate-45'
@@ -103,6 +109,7 @@ export default function Home() {
           </MobileNavLink>
 
           <Link
+            scroll={false}
             href="/#contact"
             className="my-2 flex max-w-fit items-center justify-center overflow-hidden rounded-full bg-light px-5 py-3 text-2xl leading-5 text-dark"
           >
@@ -114,24 +121,45 @@ export default function Home() {
         </div>
       </div>
 
-      <main className="">
-        <section className="w-full">
-          <div className="mx-auto flex h-screen max-w-7xl flex-col justify-center px-10 xl:px-0">
-            {/* <div className="relative translate-y-24 overflow-hidden bg-light text-9xl text-dark">
-              <div>TEST</div>
-            </div> */}
-            {/* position: relative; display: inline-block; transform: translate(0px, 0%); */}
+      <Cursor />
 
-            <h1 className="wght-600 text-5xl md:text-9xl">Yax Patel</h1>
-            <p className="text-2xl md:text-4xl">
-              A Software Engineering student at McMaster University.
+      <main className="">
+        <section className="mb-24 w-full">
+          <div className="mx-auto flex h-screen max-w-7xl flex-col justify-center px-10 xl:px-0">
+            <video
+              autoPlay
+              muted
+              loop
+              className="absolute left-0 top-0 h-full w-full object-cover"
+              src="/bg.webm"
+              style={{ filter: 'blur(30px) brightness(90%)' }}
+            />
+
+            <div className="hero-bg absolute left-0 top-0 z-20 h-full w-full object-cover opacity-0"></div>
+
+            <div className="z-10">
+              <h1 className="wght-600 pointer-events-none select-none items-center text-center text-7xl font-bold leading-snug sm:leading-relaxed md:text-[10rem] lg:text-[13rem] lg:leading-loose xl:text-[15rem] 2xl:text-[17rem]">
+                Yax Patel
+              </h1>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="mb-24">
+          <div className="wght-700 md:project mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
+            <div className="pb-8">About</div>
+          </div>
+          <div className="mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
+            <p className="wght-500 mt-16 text-5xl sm:text-2xl lg:text-4xl">
+              Hey, I&apos;m A Software Engineering student at McMaster
+              University.
               <br />
               I&apos;m passionate about creating innovative software solutions.
             </p>
           </div>
         </section>
 
-        <section id="projects" className="scroll-m-24 md:scroll-m-28">
+        <section id="projects" className="">
           <div className="wght-700 md:project mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
             <div className="pb-8">Projects</div>
           </div>
@@ -177,8 +205,9 @@ export default function Home() {
             &copy; {new Date().getFullYear()} All Rights Reserved.
           </div>
 
-          <div>
+          <div className="">
             <Link
+              scroll={false}
               target="_blank"
               rel="noopener noreferrer"
               className=""

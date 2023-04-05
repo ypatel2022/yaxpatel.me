@@ -45,6 +45,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   @apply bg-dark text-light selection:bg-light selection:text-dark;
+  cursor: none;
 }
 
 /* preload images */
@@ -84,15 +85,35 @@ nav:after {
   right: 0;
 }
 
-bg-project-image {
-  height: 100%;
-  overflow: hidden;
+section {
+  @apply scroll-m-24 md:scroll-m-28;
+}
+
+a {
+  cursor: none;
+}
+
+.cursor {
+  backdrop-filter: grayscale(1);
+  -webkit-backdrop-filter: grayscale(1);
+  background-color: #000000;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  mix-blend-mode: difference;
   opacity: 1;
-  -webkit-transition: background 1.5s linear;
-  -moz-transition: background 1.5s linear;
-  -o-transition: background 1.5s linear;
-  -ms-transition: background 1.5s linear;
-  transition: background 1.5s linear;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 60;
+
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: linear;
+  transition-duration: 50ms;
+  transition: width 100ms, height 100ms;
 }
 
 @layer components {

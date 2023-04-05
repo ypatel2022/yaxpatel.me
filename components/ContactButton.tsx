@@ -1,14 +1,15 @@
-import Link from 'next/link'
 import React from 'react'
-import RightArrowIcon from './icons/RightArrowIcon'
+import Link from 'next/link'
+import { RightArrowIcon } from './icons'
 
 export default function ContactButton({ className }: { className?: string }) {
   return (
     <Link
+      scroll={false}
       href="/#contact"
-      className={`group/contact relative flex items-center justify-center overflow-hidden rounded-full bg-light px-5 py-2 leading-5 text-dark ${className}`}
+      className={`group/contact mouse-hover-sm relative flex items-center justify-center overflow-hidden rounded-full bg-light px-5 py-2 leading-5 text-dark ${className}`}
     >
-      <div className="w-full">
+      <div className="mouse-hover-sm w-full">
         <div className="w-full transition-transform duration-300 ease-in-out group-hover/contact:-translate-y-12">
           <div className="flex items-center gap-2">Contact</div>
         </div>
@@ -17,7 +18,7 @@ export default function ContactButton({ className }: { className?: string }) {
         </div>
       </div>
 
-      <div className="w-full">
+      <div className="mouse-hover-sm w-full">
         <div className="w-full transition-transform duration-700 ease-in-out group-hover/contact:-translate-y-12">
           <RightArrowIcon />
         </div>

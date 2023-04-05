@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function LogoIcon() {
+export default function LogoIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      className="h-4 w-4"
+      className={`h-4 w-4 ${className}`}
     >
       <path
         fillRule="evenodd"

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function MobileNavLink({
   children,
@@ -13,6 +13,7 @@ export default function MobileNavLink({
   return (
     <div className="relative inline-block items-center justify-center py-2 text-2xl">
       <Link
+        scroll={false}
         onClick={() => setMenuOpen(false)}
         href={href}
         className="inline-block"
