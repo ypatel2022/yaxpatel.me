@@ -16,10 +16,11 @@ import projects from './data/projects.json'
 
 import {
   GitHubIcon,
-  ExternalLinkIcon,
   LogoIcon,
   MenuIcon,
   RightArrowIcon,
+  LinkedInIcon,
+  InfoIcon,
 } from '@/components/icons'
 import Link from 'next/link'
 
@@ -124,7 +125,7 @@ export default function Home() {
       <Cursor />
 
       <main className="">
-        <section className="mb-24 w-full">
+        <section id="hero" className="mb-24 w-full">
           <div className="mx-auto flex h-screen max-w-7xl flex-col justify-center px-10 xl:px-0">
             <video
               autoPlay
@@ -150,7 +151,7 @@ export default function Home() {
             <div className="pb-8">About</div>
           </div>
           <div className="mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
-            <p className="wght-500 mt-16 text-5xl sm:text-2xl lg:text-4xl">
+            <p className="wght-500 text-2xl sm:text-3xl md:mt-16 lg:text-4xl">
               Hey, I&apos;m A Software Engineering student at McMaster
               University.
               <br />
@@ -159,7 +160,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="">
+        <section id="projects" className="mb-24">
           <div className="wght-700 md:project mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
             <div className="pb-8">Projects</div>
           </div>
@@ -196,10 +197,47 @@ export default function Home() {
           </div>
         </section>
 
-        <section className=""></section>
+        <section id="contact" className="">
+          <div className="wght-700 md:project mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
+            <div className="pb-8">Contact</div>
+          </div>
+
+          <div className="mx-auto max-w-7xl px-5 md:px-10 xl:px-0">
+            <p className="wght-500 text-2xl sm:text-3xl md:mt-16 lg:text-4xl">
+              Thanks for checking out my website!
+              <br />
+              <br />
+              Feel free to reach out to me at{' '}
+              <a href="mailto:yaxpatel2004@gmail.com">
+                yaxpatel2004@gmail.com
+              </a>{' '}
+              if you have any questions.
+            </p>
+
+            <div className="mt-10 grid grid-cols-1 gap-4 md:flex">
+              <ExternalLink
+                icon={LinkedInIcon()}
+                href="https://www.linkedin.com/in/yaxpatel2004/"
+              >
+                LinkedIn
+              </ExternalLink>
+
+              <ExternalLink
+                icon={GitHubIcon()}
+                href="https://github.com/ypatel2022"
+              >
+                GitHub
+              </ExternalLink>
+
+              <ExternalLink icon={InfoIcon()} href="/Yax_Patel_Resume.pdf">
+                Resume
+              </ExternalLink>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <footer className="wght-500 w-full py-6">
+      <footer className="wght-500 w-full pb-6 pt-16">
         <div className="ml-auto mr-auto flex max-w-7xl items-center px-10 xl:px-0">
           <div className="flex-grow">
             &copy; {new Date().getFullYear()} All Rights Reserved.

@@ -44,8 +44,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  @apply bg-dark text-light selection:bg-light selection:text-dark;
-  cursor: none;
+  @apply bg-dark text-light selection:bg-light selection:text-dark md:cursor-none;
 }
 
 /* preload images */
@@ -90,7 +89,7 @@ section {
 }
 
 a {
-  cursor: none;
+  @apply md:cursor-none;
 }
 
 .cursor {

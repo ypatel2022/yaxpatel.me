@@ -5,9 +5,11 @@ import Link from 'next/link'
 export default function ExternalLink({
   children,
   href,
+  icon,
 }: {
   children: React.ReactNode
   href: string
+  icon?: JSX.Element
 }) {
   return (
     <Link
@@ -30,10 +32,10 @@ export default function ExternalLink({
 
       <div className="mouse-hover-sm w-full">
         <div className="w-full transition-transform duration-700 ease-in-out group-hover:-translate-y-12">
-          <ExternalLinkIcon />
+          {icon || <ExternalLinkIcon />}
         </div>
         <div className="pointer-events-none absolute translate-y-2 select-none transition-transform duration-700 ease-in-out group-hover:-translate-y-5">
-          <ExternalLinkIcon />
+          {icon || <ExternalLinkIcon />}
         </div>
       </div>
     </Link>

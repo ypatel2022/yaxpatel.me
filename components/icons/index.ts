@@ -1,6 +1,8 @@
 export { default as LogoIcon } from './LogoIcon'
 export { default as ExternalLinkIcon } from './ExternalLinkIcon'
 export { default as GitHubIcon } from './GitHubIcon'
+export { default as LinkedInIcon } from './LinkedInIcon'
 export { default as MenuIcon } from './MenuIcon'
 export { default as RightArrowIcon } from './RightArrowIcon'
 export { default as DownArrowIcon } from './DownArrowIcon'
+export { default as InfoIcon } from './InfoIcon'

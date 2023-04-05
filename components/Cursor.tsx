@@ -20,7 +20,6 @@ export default function Test() {
     }
 
     const mouseOverHandler = (event: any) => {
-      console.log(event.target.classList.contains('mouse-hover'))
       if (
         event.target.href ||
         event.target.classList.contains('mouse-hover-sm')
