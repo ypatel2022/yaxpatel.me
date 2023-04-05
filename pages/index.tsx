@@ -111,6 +111,7 @@ export default function Home() {
 
           <Link
             scroll={false}
+            onClick={() => setMenuOpen(false)}
             href="/#contact"
             className="my-2 flex max-w-fit items-center justify-center overflow-hidden rounded-full bg-light px-5 py-3 text-2xl leading-5 text-dark"
           >
@@ -238,7 +239,7 @@ export default function Home() {
       </main>
 
       <footer className="wght-500 w-full pb-6 pt-16">
-        <div className="ml-auto mr-auto flex max-w-7xl items-center px-10 xl:px-0">
+        <div className="ml-auto mr-auto flex max-w-7xl items-center px-5 md:px-10 xl:px-0">
           <div className="flex-grow">
             &copy; {new Date().getFullYear()} All Rights Reserved.
           </div>
