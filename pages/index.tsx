@@ -185,7 +185,7 @@ export default function Home() {
                 }}
               >
                 <div className="wght-600 text-4xl">{project.title}</div>
-                <div className="text-xl">{project.description}</div>
+                <div className="mt-2 text-xl">{project.description}</div>
                 <div className="mt-4 flex flex-col gap-2">
                   {project.links.map((link, index) => (
                     <ExternalLink key={index} href={link.link}>
