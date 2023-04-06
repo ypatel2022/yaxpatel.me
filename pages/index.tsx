@@ -126,21 +126,23 @@ export default function Home() {
       <Cursor />
 
       <main className="">
-        <section id="hero" className="mb-24 w-full">
+        <section id="hero" className="mb-24 w-full bg-black">
           <div className="mx-auto flex h-screen max-w-7xl flex-col justify-center px-10 xl:px-0">
             <video
               autoPlay
               muted
               loop
-              className="absolute left-0 top-0 h-full w-full object-cover"
+              className="absolute left-0 top-0 mt-10 h-full w-full"
               src="/bg.webm"
-              style={{ filter: 'blur(30px) brightness(90%)' }}
             />
+
+            {/* gradient */}
+            <div className="absolute -bottom-10 left-0 z-10 h-full w-full bg-gradient-to-b from-transparent via-transparent to-dark"></div>
 
             <div className="hero-bg absolute left-0 top-0 z-20 h-full w-full object-cover opacity-0"></div>
 
             <div className="z-10">
-              <h1 className="wght-600 pointer-events-none select-none items-center text-center text-7xl font-bold leading-snug sm:leading-relaxed md:text-[10rem] lg:text-[13rem] lg:leading-loose xl:text-[15rem] 2xl:text-[17rem]">
+              <h1 className="wght-600 pointer-events-none select-none items-center pt-10 text-center text-7xl font-bold leading-snug sm:leading-relaxed md:text-[8rem] lg:text-[11rem] lg:leading-loose xl:text-[12rem] 2xl:text-[15rem]">
                 Yax Patel
               </h1>
             </div>
