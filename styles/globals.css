@@ -124,6 +124,24 @@ a {
   transition: width 100ms, height 100ms;
 }
 
+.background-animate {
+  -webkit-animation: background-motion 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  -moz-animation: background-motion 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: background-motion 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes background-motion {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @layer components {
   .wght-300 {
     font-variation-settings: 'wght' 300;
@@ -153,7 +171,7 @@ a {
 
   .project:after {
     content: '';
-    background: #2f2f32;
+    @apply bg-dark-accent;
     position: absolute;
     /* bottom: 0; */
     /* left: 0; */

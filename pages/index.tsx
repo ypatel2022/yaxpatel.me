@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import {
   NavLink,
@@ -8,12 +9,8 @@ import {
   ExternalLink,
   Project,
   Cursor,
+  Experiences,
 } from '@/components'
-
-import { ProjectType } from '@/types'
-
-import projects from './data/projects.json'
-
 import {
   GitHubIcon,
   LogoIcon,
@@ -23,7 +20,11 @@ import {
   InfoIcon,
   BulletPointIcon,
 } from '@/components/icons'
-import Link from 'next/link'
+
+import { ProjectType, ExperienceType } from '@/types'
+
+import projects from './data/projects.json'
+import experiences from './data/experiences.json'
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -48,82 +49,86 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav
-        className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-50 w-full bg-dark py-5 text-sm md:bg-dark md:text-light ${''}`}
-      >
-        <div
-          className={`ml-auto mr-auto flex max-w-7xl items-center justify-between px-10 xl:px-0`}
+      <>
+        <nav
+          className={`transition-ease-in-out fixed bottom-auto left-0 top-0 z-50 w-full bg-dark py-5 text-sm md:bg-dark md:text-light ${''}`}
         >
-          <Link
-            className="wght-600 mouse-hover-sm group w-full flex-grow justify-between"
-            href="/"
-            onClick={() => setMenuOpen(false)}
+          <div
+            className={`ml-auto mr-auto flex max-w-7xl items-center justify-between px-10 xl:px-0`}
           >
-            <div className="mouse-hover-sm flex items-center gap-2">
-              <div
-                className={`-rotate-45 transition-transform duration-200 ease-in-out group-hover:rotate-45 ${
-                  menuOpen && 'rotate-45'
-                }`}
-              >
-                <LogoIcon />
-              </div>
-              Yax Patel
-            </div>
-          </Link>
-
-          <div className="hidden flex-1 items-center justify-end gap-10 md:flex lg:gap-14">
-            <NavLink href="/#about">About</NavLink>
-            <NavLink href="/#experience">Experience</NavLink>
-            <NavLink href="/#projects">Projects</NavLink>
-            <NavLink href="/Yax_Patel_Resume.pdf">Resume</NavLink>
-            <ContactButton />
-          </div>
-
-          <div className="block md:hidden">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="cursor-pointer"
-              title="Navigation Menu Toggle"
+            <Link
+              className="wght-600 mouse-hover-sm group w-full flex-grow justify-between"
+              href="/"
+              onClick={() => setMenuOpen(false)}
             >
-              <MenuIcon />
-            </button>
+              <div className="mouse-hover-sm flex items-center gap-2">
+                <div
+                  className={`-rotate-45 transition-transform duration-200 ease-in-out group-hover:rotate-45 ${
+                    menuOpen && 'rotate-45'
+                  }`}
+                >
+                  <LogoIcon />
+                </div>
+                Yax Patel
+              </div>
+            </Link>
+
+            <div className="hidden flex-1 items-center justify-end gap-10 md:flex lg:gap-14">
+              <NavLink href="/#about">About</NavLink>
+              <NavLink href="/#experience">Experience</NavLink>
+              <NavLink href="/#projects">Projects</NavLink>
+              <NavLink href="/Yax_Patel_Resume.pdf">Resume</NavLink>
+              <ContactButton />
+            </div>
+
+            <div className="block md:hidden">
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="cursor-pointer"
+                title="Navigation Menu Toggle"
+              >
+                <MenuIcon />
+              </button>
+            </div>
+          </div>
+        </nav>
+        {/* mobile menu */}
+        <div
+          className={`transition-ease-in-out fixed z-50 mt-[4.25rem] h-screen w-full border-t border-[#2f2f32] bg-dark px-10 text-white transition-all md:hidden ${
+            menuOpen ? '-translate-x-0' : '-translate-x-full'
+          }`}
+        >
+          <div className="grid select-none grid-cols-1 gap-4 pt-4">
+            <MobileNavLink setMenuOpen={setMenuOpen} href="/#about">
+              about
+            </MobileNavLink>
+            <MobileNavLink setMenuOpen={setMenuOpen} href="/#experience">
+              experience
+            </MobileNavLink>
+            <MobileNavLink setMenuOpen={setMenuOpen} href="/#projects">
+              projects
+            </MobileNavLink>
+            <MobileNavLink
+              setMenuOpen={setMenuOpen}
+              href="/Yax_Patel_Resume.pdf"
+            >
+              resume
+            </MobileNavLink>
+
+            <Link
+              scroll={false}
+              onClick={() => setMenuOpen(false)}
+              href="/#contact"
+              className="my-2 flex max-w-fit items-center justify-center overflow-hidden rounded-full bg-light px-5 py-3 text-2xl leading-5 text-dark"
+            >
+              <div className="flex w-full gap-4">
+                <div className="flex items-center gap-2">Contact</div>
+                <RightArrowIcon />
+              </div>
+            </Link>
           </div>
         </div>
-      </nav>
-      {/* mobile menu */}
-      <div
-        className={`transition-ease-in-out fixed z-50 mt-[4.25rem] h-screen w-full border-t border-[#2f2f32] bg-dark px-10 text-white transition-all md:hidden ${
-          menuOpen ? '-translate-x-0' : '-translate-x-full'
-        }`}
-      >
-        <div className="grid select-none grid-cols-1 gap-4 pt-4">
-          <MobileNavLink setMenuOpen={setMenuOpen} href="/#about">
-            about
-          </MobileNavLink>
-          <MobileNavLink setMenuOpen={setMenuOpen} href="/#experience">
-            experience
-          </MobileNavLink>
-          <MobileNavLink setMenuOpen={setMenuOpen} href="/#projects">
-            projects
-          </MobileNavLink>
-          <MobileNavLink setMenuOpen={setMenuOpen} href="/Yax_Patel_Resume.pdf">
-            resume
-          </MobileNavLink>
-
-          <Link
-            scroll={false}
-            onClick={() => setMenuOpen(false)}
-            href="/#contact"
-            className="my-2 flex max-w-fit items-center justify-center overflow-hidden rounded-full bg-light px-5 py-3 text-2xl leading-5 text-dark"
-          >
-            <div className="flex w-full gap-4">
-              <div className="flex items-center gap-2">Contact</div>
-              <RightArrowIcon />
-            </div>
-          </Link>
-        </div>
-      </div>
-
+      </>
       <Cursor />
 
       <main className="">
@@ -156,12 +161,17 @@ export default function Home() {
           </div>
           <div className="mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
             <p className="wght-500 text-2xl sm:text-3xl md:mt-16 lg:text-4xl">
-              Hey, I&apos;m a Software Engineering student at McMaster
-              University.
+              Hey, I&apos;m Yax Patel, a software developer based in Hamilton,
+              Ontario, Canada. I have developed a wide range of projects from
+              games, to physics simulations, to full-stack web apps. I&apos;m
+              passionate about creating innovative software solutions to
+              real-world problems.
               <br />
-              I&apos;m passionate about creating innovative software solutions.
-              <br />I enjoy working on full-stack apps, games, and physics
-              simulations.
+              <br />
+              Currently, I&apos;m a Software Engineering student at McMaster
+              University. When I&apos;m not studying, I&apos;m attending
+              hackathons, playing video games, solving puzzles, learning
+              something new, or exploring nature.
             </p>
           </div>
         </section>
@@ -170,8 +180,11 @@ export default function Home() {
           <div className="wght-700 md:project mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
             <div className="pb-8">Experience</div>
           </div>
-          <div className="mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
-            <p className="wght-500 text-2xl sm:text-3xl md:mt-16 lg:text-4xl"></p>
+
+          <div className="mx-auto grid max-w-7xl gap-5 px-5 md:mt-16 md:px-10 xl:px-0">
+            {experiences.map((experience: ExperienceType, index: number) => (
+              <Experiences key={index} data={experience} index={index} />
+            ))}
           </div>
         </section>
 

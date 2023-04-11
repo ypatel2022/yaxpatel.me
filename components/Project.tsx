@@ -24,8 +24,10 @@ export default function Project({
       }}
     >
       <div className="mx-auto grid w-full max-w-7xl grid-cols-8 items-center gap-4 py-8">
-        <div className="wght-700 col-span-5 text-6xl">{data.title}</div>
-        <div className="col-span-3">
+        <div className="wght-700 col-span-4 text-6xl xl:col-span-5">
+          {data.title}
+        </div>
+        <div className="col-span-4 xl:col-span-3">
           {data.description}
 
           <div className="mt-4 flex gap-4">
