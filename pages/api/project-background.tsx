@@ -15,6 +15,7 @@ export default async function handler(req: NextRequest) {
     'linear-gradient(to bottom right, #28d9bc 25%, #30d9be 50%, #7de7d6 75%)',
     'linear-gradient(to bottom right, #ff9e2d 25%, #ff782d 50%, #ff642d 75%)',
     'linear-gradient(75deg, #8e52a1 0%, #1015e4 60%, #020770 95%)',
+    'linear-gradient(to bottom right, #020004 25%, #110024 50%, #190033 75%)',
     
   */
 
@@ -26,7 +27,7 @@ export default async function handler(req: NextRequest) {
           width: '100%',
           display: 'flex',
           backgroundImage:
-            'linear-gradient(to bottom right, #020004 25%, #110024 50%, #190033 75%)',
+            'linear-gradient(to bottom right, #5433FF 25%, #20BDFF 50%, #A5FECB 75%)',
         }}
       ></div>
     ),

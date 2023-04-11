@@ -21,6 +21,7 @@ import {
   RightArrowIcon,
   LinkedInIcon,
   InfoIcon,
+  BulletPointIcon,
 } from '@/components/icons'
 import Link from 'next/link'
 
@@ -155,11 +156,22 @@ export default function Home() {
           </div>
           <div className="mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
             <p className="wght-500 text-2xl sm:text-3xl md:mt-16 lg:text-4xl">
-              Hey, I&apos;m A Software Engineering student at McMaster
+              Hey, I&apos;m a Software Engineering student at McMaster
               University.
               <br />
               I&apos;m passionate about creating innovative software solutions.
+              <br />I enjoy working on full-stack apps, games, and physics
+              simulations.
             </p>
+          </div>
+        </section>
+
+        <section id="experience" className="mb-24">
+          <div className="wght-700 md:project mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
+            <div className="pb-8">Experience</div>
+          </div>
+          <div className="mx-auto max-w-7xl px-5 text-6xl md:px-10 xl:px-0">
+            <p className="wght-500 text-2xl sm:text-3xl md:mt-16 lg:text-4xl"></p>
           </div>
         </section>
 
