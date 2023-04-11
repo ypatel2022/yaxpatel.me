@@ -24,7 +24,7 @@ export default function Experiences({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className="relative">
+        <div className="hidden md:relative">
           <RightArrowIcon className="mouse-hover-sm absolute right-0 top-0 transition-all group-hover:right-2" />
         </div>
 
