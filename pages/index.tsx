@@ -126,18 +126,18 @@ export default function Home() {
       <Cursor />
 
       <main className="">
-        <section id="hero" className="mb-24 w-full bg-black">
+        <section id="hero" className="mb-24 w-full">
           <div className="mx-auto flex h-screen max-w-7xl flex-col justify-center px-10 xl:px-0">
             <video
               autoPlay
               muted
               loop
-              className="absolute left-0 top-0 mt-10 h-full w-full"
-              src="/bg.webm"
+              className="absolute left-0 top-0 mt-10 h-full w-full object-cover"
+              src="/bg.mp4"
             />
 
             {/* gradient */}
-            <div className="absolute -bottom-10 left-0 z-10 h-full w-full bg-gradient-to-b from-transparent via-transparent to-dark"></div>
+            <div className="hero-gradient-cover absolute -bottom-10 left-0 z-10 h-full w-full"></div>
 
             <div className="hero-bg absolute left-0 top-0 z-20 h-full w-full object-cover opacity-0"></div>
 

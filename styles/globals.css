@@ -92,6 +92,15 @@ a {
   @apply md:cursor-none;
 }
 
+.hero-gradient-cover {
+  background: linear-gradient(
+    0deg,
+    rgba(22, 22, 24, 1) 0%,
+    rgba(255, 255, 255, 0) 37%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
 .cursor {
   backdrop-filter: grayscale(1);
   -webkit-backdrop-filter: grayscale(1);
