@@ -147,11 +147,9 @@ export default function Home() {
 
             <div className="hero-bg absolute left-0 top-0 z-20 h-full w-full object-cover opacity-0"></div>
 
-            <div className="z-10">
-              <h1 className="wght-600 pointer-events-none select-none items-center pt-10 text-center text-7xl font-bold leading-snug sm:leading-relaxed md:text-[8rem] lg:text-[11rem] lg:leading-loose xl:text-[12rem] 2xl:text-[15rem]">
-                Yax Patel
-              </h1>
-            </div>
+            <h1 className="wght-600 hero-text pointer-events-none z-10 select-none items-center pt-10 text-center text-7xl font-bold leading-snug sm:leading-relaxed md:text-[8rem] lg:text-[11rem] lg:leading-loose xl:text-[12rem] 2xl:text-[15rem]">
+              Yax Patel
+            </h1>
           </div>
         </section>
 

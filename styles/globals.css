@@ -101,6 +101,11 @@ a {
   );
 }
 
+.hero-text {
+  color: white;
+  mix-blend-mode: difference;
+}
+
 .cursor {
   backdrop-filter: grayscale(1);
   -webkit-backdrop-filter: grayscale(1);
