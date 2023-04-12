@@ -31,4 +31,4 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./out
-          cname: beta.yaxpatel.me
+          cname: yaxpatel.me
