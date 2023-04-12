@@ -138,6 +138,7 @@ export default function Home() {
               autoPlay
               muted
               loop
+              playsInline
               className="absolute left-0 top-0 mt-10 h-full w-full object-cover"
               src="/bg.mp4"
             />
