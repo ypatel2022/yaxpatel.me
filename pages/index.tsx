@@ -167,7 +167,7 @@ export default function Home() {
               real-world problems.
               <br />
               <br />
-              Currently, I&apos;m a Software Engineering student at McMaster
+              Currently, I&apos;m a Computer Engineering student at McMaster
               University. When I&apos;m not studying, I&apos;m attending
               hackathons, playing video games, solving puzzles, learning
               something new, or exploring nature.
