@@ -9,7 +9,7 @@ const gradients = [
   'linear-gradient(to bottom right, #020004 25%, #0d001b 50%, #100020 75%)',
 ]
 
-export default function Experiences({
+export default function Experience({
   data,
   index,
 }: {
@@ -19,7 +19,7 @@ export default function Experiences({
   return (
     <div className="grid md:grid-cols-2 md:gap-5">
       <a
-        className="mouse-hover-sm group block h-full w-full select-none rounded-t-xl bg-dark-accent p-4 transition-all hover:bg-dark-hover hover:pl-6 md:rounded-xl"
+        className="mouse-hover-sm group block h-full w-full select-none rounded-t-xl bg-dark-accent p-4 transition-all hover:bg-dark-hover md:rounded-xl md:hover:pl-6"
         href={data.link}
         target="_blank"
         rel="noopener noreferrer"
