@@ -14,7 +14,7 @@ export default function Test() {
     const mouseMoveHandler = (e: MouseEvent) => {
       gsap.ticker.fps(200)
       gsap.set('.follower', { xPercent: -50, yPercent: -50 })
-      gsap.to('.follower', { duration: 0.15, x: e.clientX, y: e.clientY })
+      gsap.to('.follower', { duration: 0.1, x: e.clientX, y: e.clientY })
     }
 
     const mouseOverHandler = (event: any) => {

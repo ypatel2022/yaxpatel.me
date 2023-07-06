@@ -1,5 +1,16 @@
 [
   {
+    "title": "Spotify Media Controller",
+    "description": "A desktop media controller that provides seamless control over your Spotify playback. It utilizes the Spotify API to help you play, pause, and skip tracks. The device also incorporates an OLED display, showing you the current song and artist information. Developed using the ESP32, C++, and the Spotify API.",
+    "timeline": "May 2023",
+    "links": [
+      {
+        "name": "GitHub",
+        "link": "https://github.com/ypatel2022/esp32-oled-spotify-controller"
+      }
+    ]
+  },
+  {
     "title": "Billow",
     "description": "A place to keep track of all of your bills to manage your money. Won overall third place at the Google Developer Student Clubs McMaster Solutions Incubator. Developed using Next.js, TypeScript, Firebase, and Tailwind CSS.",
     "timeline": "Jan 2023",
@@ -78,21 +89,6 @@
       {
         "name": "Download on Itch.io",
         "link": "https://mash-backslash-studios.itch.io/backend-bruno"
-      }
-    ]
-  },
-  {
-    "title": "Markdown Blog",
-    "description": "Create styled blog posts using markdown. Developed using Express.js, Tailwind CSS, MongoDB, and EJS.",
-    "timeline": "Jul 2021",
-    "links": [
-      {
-        "name": "GitHub",
-        "link": "https://github.com/ypatel2022/markdown-blog"
-      },
-      {
-        "name": "Deployed App",
-        "link": "https://markdown-blog-ypatel2022.herokuapp.com/"
       }
     ]
   },
